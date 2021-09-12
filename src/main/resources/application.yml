@@ -1,0 +1,27 @@
+logging:
+  file:
+    name: /home/candidate-service/logs/CandidateService.log
+  level:
+    root: WARN
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${DISCOVERY_SERVICE_URL}
+
+spring:
+  application:
+    name: candidate
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${CANDIDATE_DATABASE_HOSTNAME}:3306/${CANDIDATE_DATABASE_NAME}
+    username: ${CANDIDATE_DATABASE_USER}
+    password: ${CANDIDATE_DATABASE_PASSWORD}
+    hikari:
+      initialization-fail-timeout: -1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
