@@ -7,8 +7,8 @@ import javax.validation.Valid;
 
 import org.miniats.candidateservice.model.Candidate;
 import org.miniats.candidateservice.repository.CandidateRepository;
-import org.miniats.candidateservice.util.UidGenerator;
-import org.miniats.candidateservice.util.ValidationErrorUtility;
+import org.miniats.common.util.UidGenerator;
+import org.miniats.common.util.ValidationErrorUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

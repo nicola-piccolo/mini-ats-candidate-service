@@ -37,7 +37,7 @@ public class Candidate {
 	private String lastName;
 
 	@NotNull
-	@Size(max=256, message="Email must be max 128 characters long")
+	@Size(max=256, message="Email must be max 256 characters long")
 	private String email;
 	
 	@Column(name="mobile_phone")

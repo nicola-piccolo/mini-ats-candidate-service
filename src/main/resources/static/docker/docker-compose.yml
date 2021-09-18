@@ -13,8 +13,8 @@ services:
       - candidate-network
   candidate-service:
     image: miniats/candidate-service:latest
-    ports: 
-      - 8080:8080
+    expose: 
+      - 8080
     volumes:
       - /tmp:/home/candidate-service/logs
     env_file:
