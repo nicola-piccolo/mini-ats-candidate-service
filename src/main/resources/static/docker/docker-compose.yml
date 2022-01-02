@@ -10,7 +10,7 @@ services:
     env_file:
       - ./.database-env
     networks: 
-      - candidate-network
+      - ats-network
   candidate-service:
     image: miniats/candidate-service:latest
     expose: 
@@ -23,12 +23,10 @@ services:
     depends_on:
       - candidate-database
     networks: 
-      - candidate-network
-      - global-network
+      - ats-network
 volumes:
   candidate-database-data:
 networks:
-  candidate-network:
-  global-network:
+  ats-network:
     external:
       name: mini-ats-network
